@@ -1,12 +1,14 @@
-
-
 const sectionLivros = document.querySelector("[data-livros]")
+const precoTotal = document.querySelector("[data-precoTotal]")
 
-export function imprimeLivros(livrosNaTela) {
+function imprimeLivros(livrosNaTela) {
+    precoTotal.innerHTML = ""
+    sectionLivros.innerHTML = ""
     livrosNaTela.forEach(livro => {
+        let disponibilidade = livro.quantidade > 0 ? 'livro__imagens' : 'livro__imagens indisponivel'
         sectionLivros.innerHTML += `
         <div class="livro">
-            <img class="livro__imagens" src="${livro.imagem}" />
+            <img class="${disponibilidade}" src="${livro.imagem}" />
             <h2 class="livro__titulo">
                 ${livro.titulo}
             </h2>

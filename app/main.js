@@ -1,6 +1,3 @@
-import {imprimeLivros} from "../app/metodoForEach.js"
-import {aplicarDescontos} from "../app/metodoMap.js"
-
 let livros = []
 const APILivros = `https://guilhermeonrails.github.io/casadocodigo/livros.json
 `
